@@ -20,7 +20,7 @@ Game.prototype.showGrid = function () {
 
 
 Game.prototype.updatePosition = function(grid_position) {
-  this.gridArray[grid_position - 1] = "X";
+  this.gridArray[grid_position - 1] = this.playerTurn();
 };
 
 Game.prototype.playerChosePosition = function(grid_position) {
@@ -28,6 +28,6 @@ Game.prototype.playerChosePosition = function(grid_position) {
   this.showGrid();
 };
 
-Game.prototype.playerTurn = function (turn) {
-  return "X";
+Game.prototype.playerTurn = function () {
+  return this.player_class.nextPlayer();
 };

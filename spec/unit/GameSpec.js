@@ -1,8 +1,10 @@
 describe("Game Unit Tests", function() {
   var game;
+  var player;
 
   beforeEach(function() {
-    game = new Game();
+    player = new Player();
+    game = new Game(player);
   });
 
   it("Grid Array should be numbered between 1 - 9", function() {
@@ -25,6 +27,9 @@ describe("Game Unit Tests", function() {
   });
 
   it("Should alternate between player X and O", function () {
-    expect(game.playerTurn()).toEqual("X");
+    spyOn(player, "nextPlayer");
+
+    game.playerTurn();
+    expect(player.nextPlayer).toHaveBeenCalled();
   });
 });
