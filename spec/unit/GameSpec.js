@@ -23,4 +23,8 @@ describe("Game Unit Tests", function() {
     expect(game.updatePosition).toHaveBeenCalled();
     expect(game.showGrid).toHaveBeenCalled();
   });
+
+  it("Should alternate between player X and O", function () {
+    expect(game.playerTurn()).toEqual("X");
+  });
 });

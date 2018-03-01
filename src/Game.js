@@ -1,5 +1,6 @@
-function Game() {
+function Game(player) {
   this.gridArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  this.player_class = player;
 }
 
 Game.prototype.showGridArray = function () {
@@ -25,4 +26,8 @@ Game.prototype.updatePosition = function(grid_position) {
 Game.prototype.playerChosePosition = function(grid_position) {
   this.updatePosition(grid_position);
   this.showGrid();
+};
+
+Game.prototype.playerTurn = function (turn) {
+  return "X";
 };
