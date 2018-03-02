@@ -39,5 +39,4 @@ describe("Game Feature Tests", function () {
         ' ' + 7 + ' | ' + 8 + ' | ' + 9 + '\n');
   });
 
-
 });

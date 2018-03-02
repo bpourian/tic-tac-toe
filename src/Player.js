@@ -3,12 +3,12 @@ function Player() {
 }
 
 Player.prototype.player1 = function () {
-  console.log("Player X:");
+  // console.log("Player X:");
   return "X";
 };
 
 Player.prototype.player2 = function () {
-  console.log("Player O:");
+  // console.log("Player O:");
   return "O";
 };
 

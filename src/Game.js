@@ -19,15 +19,19 @@ Game.prototype.showGrid = function () {
 };
 
 
+Game.prototype.playerTurn = function () {
+  return this.player_class.nextPlayer();
+};
+
 Game.prototype.updatePosition = function(grid_position) {
   this.gridArray[grid_position - 1] = this.playerTurn();
 };
 
 Game.prototype.playerChosePosition = function(grid_position) {
   this.updatePosition(grid_position);
-  this.showGrid();
+  console.log(this.showGrid());
 };
 
-Game.prototype.playerTurn = function () {
-  return this.player_class.nextPlayer();
+Game.prototype.winConditions = function () {
+
 };
